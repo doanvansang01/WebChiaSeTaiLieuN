@@ -1,0 +1,94 @@
+/* Menu */
+/* .menu1 { */
+	/* background-color: #CC99FF; */
+	/* width: 150px; */
+/* } */
+
+ol{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: white;
+}
+
+.auth-form__text{
+    font-size: 1.2rem;
+    line-height: 1.6rem; /* cách nhau của mỗi dòng chữ */
+    text-align: center;
+	text-decoration: none;
+}
+
+li a, .dropbtn{
+	display: inline-block;
+	color: black;
+	text-align: center;
+	padding:14px 16px;
+	text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn{
+	background-color: #f9f9f9;
+}
+
+li.dropdown{
+	display: inline-block;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+}
+
+.dropdown-content a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+}
+
+.dropdown-content a:hover{
+	background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content{
+	display: block;
+}
+
+/* Css header */
+.image{
+    width: 100%;
+    height: 60px;
+    background-color: rgb(48, 230, 24);
+}
+
+.menu{
+    width: 100%;
+    height: 100px;
+    background-color: blueviolet;
+}
+
+.input_find{
+    margin: 35px 10px 35px 460px;
+    border: 1px solid rgb(82, 81, 81);
+    border-radius: 14px;
+    width: 255px;
+    height: 30px;
+}
+ 
+.btn_dowload{
+    margin-left: 40px;
+    margin-right: 162px;
+    border: 1px solid rgb(7,156,243);
+    border-radius: 14px;
+    height: 20px;
+}
+
+.span_group{
+    cursor: pointer;
+}

@@ -1,0 +1,21 @@
+.download{
+    margin-bottom: 20px;
+    margin-top: 5px;
+    display: inline-block;
+}
+
+.btn-dow{
+    text-decoration: none;
+    background-color: #ea4335;
+    padding: 5px 35px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.5s, background 0.5s;
+}
+
+.btn-dow:hover{
+    color: #fff;
+    background-color: #0583f2;
+}
+

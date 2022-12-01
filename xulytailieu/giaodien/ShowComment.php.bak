@@ -1,0 +1,92 @@
+<?php
+				// Phần hiển thị comment
+				
+				if(isset($_SESSION['id']))
+				{
+					$connect = mysqli_connect("localhost","root","","library")or die("Connect failed");
+					mysqli_set_charset($connect, 'utf8');
+					$id = $_GET['id'];
+					$user_id = $_SESSION['id'];
+					$sql = "select a.hoten, c.content, c.user_id , c.id, c.document_id from comment c, account a where document_id=".$id." and a.id = c.user_id";
+					$result = mysqli_query($connect,$sql);
+					
+					if(mysqli_num_rows($result) == 0)
+					{
+						echo "<section style='color: green'>No comments</section>";
+					}
+					else{
+						
+						foreach($result as $rs)
+						{	
+							$usi = $rs['user_id'];
+							$dci = $rs['document_id'];
+							$i = $rs['id'];
+							echo'
+							<div style="background-color:white; margin-bottom: 10px; border-radius: 20px ;width:84%; ">
+								<section style="margin-left: 7px">
+									<b>'.$rs['hoten'].'</b>
+								</section >
+								
+								<section style="margin-left:10px;width:84%;">
+									'.$rs['content'].'
+								';
+							
+								// Kiểu tam nguyên 
+								echo	$usi == $user_id ?'
+									<div class="dropdown" style="margin-left:1000px; ">
+									  <button class=" dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									  </button>
+									  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+									  <a class="dropdown-item" href="../code/deletedcomment.php?cmt='.$i.'&dcm='.$dci.'">Xóa</a>
+										
+									</div>
+									
+								</section>
+							</div>':'</section> </div>' ;
+							
+						}
+					}
+				}
+				else
+				{
+					$connect = mysqli_connect("localhost","root","","library")or die("Connect failed");
+					mysqli_set_charset($connect, 'utf8');
+					$id = $_GET['id'];
+					$sql = "select a.hoten, c.content from comment c, account a where document_id=".$id." and a.id = c.user_id";
+					$result = mysqli_query($connect,$sql);
+					
+					if(mysqli_num_rows($result) == 0)
+					{
+						echo "<section style='color: green'>No comments</section>";
+					}
+					else{
+						
+						foreach($result as $rs)
+						{
+							echo'
+							<div style="background-color:white; margin-bottom: 10px; border-radius: 20px ;width:84%; ">
+								<section style="margin-left: 7px">
+									<b>'.$rs['hoten'].'</b>
+								</section >
+								<section style="margin-left:10px;width:84%;">'.$rs['content'].'</section>
+							</div>	
+							';
+						}
+					}
+				}
+				?>
+				
+				
+				<form method="post" style="margin-top:20px">
+					<section>
+						<textarea name="content" style="width:84%;border-radius: 10px " rows="4" placeholder="Viết bình luận"></textarea>
+					<section>
+					<section style="margin-top:5px;margin-left:1000px">
+						<input type="submit" value="Submit"/>
+					</section>
+				</form>
+			</section>
+			
+		  </div>
+	  
+	<?php

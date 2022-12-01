@@ -1,0 +1,36 @@
+1> bảng category
+	- id: int
+	- name: text
+	
+2> Bảng doccument
+	- id: int
+	- user_id: int
+	- category_id: int
+	- filename: text
+	- title: text
+	- thumbnail: text
+	- downloads: text
+	- status: int
+	- created_at: datetime -> ngay tao ban ghi
+	- update_at: datetime -> ngay sua ban ghi do
+	
+	
+	CREATE TABLE doccument(
+		id int PRIMARY KEY AUTO_INCREMENT,
+		user_id int,
+		category_id int,
+		filename text,
+		title text,
+		thumbnail text,
+		downloads int,
+		status int ,
+		created_at datetime,
+		update_at datetime
+	);
+
+ALTER TABLE doccument ADD FOREIGN KEY ('user_id') REFERENCES account('id');
+ALTER TABLE doccument ADD FOREIGN KEY ('category_id') REFERENCES category('id');
+
+$created_at = $update_at = date('Y-m-d H:i:s');
+
+

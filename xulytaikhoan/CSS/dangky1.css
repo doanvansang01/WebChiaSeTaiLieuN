@@ -1,0 +1,128 @@
+:root {
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --primary-color:#9966FF;
+    --border-color: #4e73df;
+    --backgroud-color: pink ;
+
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    background-color: #4e73df;
+}
+.auth-form{
+    background: #4e73df;
+    background-color: #4e73df;
+}
+.form{
+    background: #4e73df;
+}
+.auth-form__noidung {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 0 32px;
+	border-styLe: groove;
+	height: 750px;
+	width: 450px;
+    border-radius: 10px;
+    background-color: var(--white-color);
+}
+
+.error{
+    color: red;
+}
+.rdb{
+    color: red;
+    margin-left: 140px;
+}
+
+.auth-form__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12;
+    margin-top: 10px;
+}
+
+.auth-form__dk {
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: var(--text-color) ;
+}
+
+.auth-form__swtich-btn {
+    font-size: 1.6rem;
+    font-weight: 450;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.auth-form__form-input {
+
+}
+
+.auth-form__input {
+    width: 100%; 
+    height: 40px;
+    margin-top: 16px;
+    padding: 0 12px;
+    font-size: 1.4rem;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    outline: none;
+}
+
+.auth-form__input:focus {
+    border-color: #777;
+}
+
+.auth-form_dieukhoan{
+    margin-top: 50px;
+}
+
+.auth-form__text{
+    font-size: 1.2rem;
+    line-height: 1.6rem; /* cách nhau của mỗi dòng chữ */
+    text-align: center;
+}
+.error-all{
+    color: red;	
+}
+.auth-form__link{
+    color: var(--primary-color);
+    text-decoration: none; /* bỏ gạch chân ở link */
+}
+
+.auth-form__controls{
+    display: flex;
+    justify-content:center;
+    margin-top: 60px;
+
+}
+
+/* Button style */
+
+.btn {
+    min-width: 120px;
+    height: 35px;
+    text-decoration: none;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    color : var(--text-color);
+    border-color: var(--white-color);
+}
+
+.btn.btn-primary{
+    color: var(--white-color);
+    background-color: var(--border-color);
+}
+
+.auth-form__controls-back{
+    margin-right: 6px;
+}

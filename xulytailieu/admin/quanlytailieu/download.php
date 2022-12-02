@@ -37,4 +37,3 @@ if(isset($_GET['path']))
 	{
 		echo "Filename is not defined.";
 	}
-?>

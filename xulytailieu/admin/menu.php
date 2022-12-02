@@ -7,15 +7,15 @@
               <i class="bi bi-house-fill"></i>
               Dashboard
             </a>
-          </li>    
+          </li>
           <li class="nav-item">
-            <a class="nav-link" href="<?=$baseUrl?>quanlytailieu/quanlytailieu.php">
+            <a class="nav-link" href="<?= $baseUrl ?>quanlytailieu/quanlytailieu.php">
               <i class="bi bi-minecart"></i>
               Quản Lý Tài Liệu
             </a>
           </li>
-		  <li class="nav-item">
-            <a class="nav-link" href="<?=$baseUrl?>quanlydanhmuc/quanlydanhmuc.php">
+          <li class="nav-item">
+            <a class="nav-link" href="<?= $baseUrl ?>quanlydanhmuc/quanlydanhmuc.php">
               <i class="bi bi-folder"></i>
               Danh Mục Tài Liệu
             </a>
@@ -27,7 +27,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="<?=$baseUrl?>quanlynguoidung/quanlyuser.php">
+            <a class="nav-link" href="<?= $baseUrl ?>quanlynguoidung/quanlyuser.php">
               <i class="bi bi-people-fill"></i>
               Quản Lý Người Dùng
             </a>
@@ -38,5 +38,5 @@
 
     <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
       <!-- hien thi tung chuc nang cua trang quan tri START-->
-	 </main>
+    </main>
   </div>
